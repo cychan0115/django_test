@@ -13,3 +13,7 @@ def add(request):
     b=request.GET['b']
     c=int(a)+int(b)
     return HttpResponse(c)
+
+def add2(request,a,b):
+    c=int(a)+int(b)
+    return HttpResponse(c)

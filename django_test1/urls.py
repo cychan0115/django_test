@@ -19,5 +19,6 @@ import django1.views
 urlpatterns = [
     url(r'^admin/' , admin.site.urls),
     url(r'^add/$',django1.views.add),
+    url(r'^add/(\d+)/(\d+)/$',django1.views.add2 ),
     url(r'^cytest/',django1.views.index),
 ]
