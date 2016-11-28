@@ -28,4 +28,6 @@ urlpatterns = [
     url(r'^accounts/', include('registration.backends.simple.urls')),
     url(r'^testdb_add/',django1.views.testdb),
     url(r'^testdb_select/',django1.views.testdb_select),
+    url(r'^testdb_update/',django1.views.testdb_update),
+    url(r'^testdb_del/',django1.views.testdb_del),
 ]
