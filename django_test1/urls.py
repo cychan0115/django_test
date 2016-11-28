@@ -15,10 +15,17 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from django.conf.urls import include, url
+
 import django1.views
 urlpatterns = [
     url(r'^admin/' , admin.site.urls),
     url(r'^add/$',django1.views.add),
     url(r'^add/(\d+)/(\d+)/$',django1.views.add2 ),
+    url(r'^home/',django1.views.home),
     url(r'^cytest/',django1.views.index),
+    #url(r'^accounts/', include('registration.backends.default.urls')),
+    url(r'^accounts/', include('registration.backends.simple.urls')),
+    url(r'^testdb_add/',django1.views.testdb),
+    url(r'^testdb_select/',django1.views.testdb_select),
 ]

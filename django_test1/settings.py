@@ -37,8 +37,23 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django1',
+    'registration',
+    'registration_email'
 ]
-
+ACCOUNT_ACTIVATION_DAYS = 7 # One-week activation window; you may, of course, use a different value.
+REGISTRATION_AUTO_LOGIN = True # Automatically log the user in.
+# more settings see: http://django-registration-redux.readthedocs.org/en/latest/
+#---------------------------------------------------------
+# Email
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_USE_TLS = False
+EMAIL_HOST = 'smtp.mxhichina.com'
+EMAIL_PORT = 25
+EMAIL_HOST_USER = 'cy.chen@networkgrand.com'
+EMAIL_HOST_PASSWORD = '@!!!!!!@#!@#!@DQWR!@E!@EQWEQ'
+DEFAULT_FROM_EMAIL = 'cy.chen@networkgrand.com'
+#---------------------------------------------------------
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
